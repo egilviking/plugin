@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='en' class='no-js'>
+<head>
+<meta charset='utf-8' />
+<title>Jquery Lightbox++ Plugin</title>
+<link rel="shortcut icon" href="img/favicon.png"> 
+<link rel="stylesheet/less" type="text/css" href="css/style.less">
+<script src="js/less.min.js"></script>
+</head>
+<body>
+<div id='wrapper'>
+	<h1>Jquery Lightbox++ Plugin</h1>
+	<div id='main'>
+			<img src="img/1.jpg" data-title="Grönt" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+			<img src="img/2.jpg" data-title="Ljusblått" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+			<img src="img/3.jpg" data-title="Ljuslila" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+			<img src="img/4.jpg" data-title="Ljusbrunt" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+			<img src="img/5.jpg" data-title="Orange" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+			<img src="img/6.jpg" data-title="Mörkblått" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" />	
+	<h3>Beskrivning</h3>
+	<p>
+		Klicka på bilderna ovan för att se ett par exempel som använder sig av detta plugin.<br> 
+		Du kommer då att se den fullständiga storleken
+		av bilden, samt en "caption" med bildens titel och beskrivning.<br><br>
+		Läs vidare för att se installationsproccessen.
+  </p>
+	</div>
+	<h2>Om Lightbox++ Plugin</h2>
+	<ul>
+		<li><h3>Innehållande filer<h3></li>
+		<li>index.html - Ett html dokument som används för att visa detta exempel.</li>
+		<li>base.less  - Ett bas css dokument som innehåller generella regler, skrivet i LESS.</li>
+		<li>style.less - Importerar base.less, här skrivs stylningen för denna sida och pluginet.</li>	
+		<li>main.js    - Pluginet är kodat i jQuery, här är koden som gör visningen av bilderna möjlig.</li>
+		<li>less.min.js  - En kompilator fil för att kompilera LESS CSS till CSS.</li>
+		<li>jquery.js    - Också självklart själva jQuery bibloteket !</li>
+		<li>Sex stycken olika jpeg bilder i olika färger. I storleken 200x200 pixlar.</li>
+	</ul>
+	<h2>Installation av Lightbox++</h2>
+	<ul>
+		<!--<a><h3>Ladda hem pluginet här<h3></a>-->
+		<li><h3>Provstart av pluginet<h3></li>
+		<li>Kopiera mappen till din utvecklingsplats och index.html.</li>
+		<li>Om du själv vill styla pluginet och kanske använda det till ditt eget projekt så följ stegen nedanför.</li>
+		<li>Det räcker att konfigurera i 2 filer för att få resultat, style.less och main.js.</li>
+		<br>
+		<li><h3>Stylning av Lightbox++<h3></li>
+		<li>Öppna style.less i din text editor.</li>
+		<li>Lightboxen är uppbyggt utav divar som går att styla i style.less dokumentet.<br>
+				#overlay  - Är den tonade bakrungsbilden som täcker hela bakgrunden.<br>
+				#lightbox - Detta element håller ihop bilden plus caption, caption innehåller i sin tur titel och beskrivning.<br>
+				.caption	- Här går det att styla caption.<br>
+				.caption title - Stylning av titel.<br>
+				.caption desc  - Stylning av beskrivning.<br>
+				.desc span     - Är den lilla texten som talar om att man ska klicka för att stänga bilden.<br></li>
+		<br>
+		<li><h3>Eget projekt<h3></li>
+		<li>För att använda pluginet på din egen webbplats, gå in i katalogen js, välj main.js och jquery.js.
+				<br>Kopiera dessa två filer till ditt projekt och länka dem till din hemsida.</li>	
+		<li>Som default inställning så letar pluginet efter img element i en div som heter main. 
+				Alla img element i div main kommer alltså att tillföras pluginet.<br>
+				För att ändra vilket div element som ska hanteras, öppna main.js. Gå till rad 6 och byt ut #main mot önskad #div.</li>
+		<li>I dina img taggar, var säker på att du anger önskad title inom attribut: data-title="TITEL" och önskad bildbeskrivning inom attribut: data-desc="BESKRIVNING"</li>
+		<li>Exempel på hur en img tag ska se ut.<br></li>
+		<li><code>&lt;img src="img/6.jpg" data-title="Mörkblått" data-desc="En fyrkantig ruta." "alt="Test" width="100px" height="100px" /&gt;</code>
+	</ul>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
